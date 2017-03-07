@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="TTSOGTVT.aspx.cs" Inherits="TTSOGTVT" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="thue_UploadDSNVP.aspx.cs" Inherits="thue_UploadDSNVP" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
@@ -35,11 +35,6 @@
         {
             
         }
-        .style12
-        {
-            color: #FF0000;
-            font-weight: bold;
-        }
         </style>
 </head>
 <body bottommargin=0 topmargin="0" leftmargin="0" rightmargin="0">
@@ -72,7 +67,7 @@
             <table width="98%" cellpadding="0" cellspacing="0">
                 <tr>
                     <td align="left" class="text">
-                        <a class='menuLink2' href='../TTSOGTVT.aspx'>Tra cứu thông tin xử phạt</a> </td>
+                        <a class='menuLink2' href='viewTTGT.aspx'>Tra cứu thông tin xử phạt</a> </td>
                     <td align="right" class="text">
                         Copyright @2016 Bưu Điện TP Hồ Chí Minh</td>
                 </tr>
@@ -101,55 +96,52 @@
 	        <tr>
 		        <td colspan="2" align="center">
                     <asp:Label ID="Label1" runat="server" ForeColor="Red" Font-Bold="True"></asp:Label>
-                </td>
+                &nbsp;<asp:LinkButton ID="cmdLogFile" runat="server" onclick="cmdLogFile_Click">logfile</asp:LinkButton></td>
 	        </tr>
 	        <tr>
 		        <td colspan="2" 
                     style="border-bottom-style: solid; border-bottom-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px" 
                     bordercolor="#FF9900">
-		        <p align="left"><b><font color="#FF9900">Đăng ký nộp phạt qua bưu điện</font>&nbsp;</b></td>
+		        <p align="left"><b><font color="#FF9900">Upload dữ liệu quyết định</font></b></td>
 	        </tr>
 	        <tr>
-		            <td align="left" class="style10">Số QĐ/Biên bản xử phạt </td>
+		            <td align="left" class="style10">Chọn file </td>
 		            <td align="left" class="style11">
-                        <asp:TextBox ID="tSO_QD" runat="server" Width="135px"></asp:TextBox>
-                        &nbsp;</td>
+                        <asp:FileUpload ID="FileUpload" runat="server" />
+                                        &nbsp;<asp:HyperLink ID="HyperLink1" runat="server" 
+                            NavigateUrl="~/fileMau_DSNVP.xls">File import mẫu</asp:HyperLink></td>
 	            </tr>
-	            <tr>
-		            <td align="left" class="style10">Số xe</td>
+                <tr>
+		            <td align="left" class="style10">Mã nghiệp vụ PP</td>
 		            <td align="left" class="style11">
-                        <asp:TextBox ID="tSO_XE" runat="server" Width="135px"></asp:TextBox>
-                                        </td>
-	            </tr>
-	            <tr>
-		            <td align="left" class="style10">Tên vi phạm</td>
-		            <td align="left" class="style11">
-                        <asp:TextBox ID="t_NGUOI_VP" runat="server" Width="270px"></asp:TextBox>
+                                        <asp:DropDownList ID="DropDownListMa_Nghiep_Vu" runat="server" Width="135px">
+                                            <asp:ListItem Selected="True">5001</asp:ListItem>
+                                            <asp:ListItem>5002</asp:ListItem>
+                        </asp:DropDownList>
                                         </td>
 	            </tr>
                 <tr>
-                    <td align="left" class="style10">
-                        Ngày lập biên bản</td>
-                    <td align="left" class="style11">
-                        <asp:TextBox ID="txt_TuNgay" runat="server" 
-                            Font-Bold="True" Font-Italic="True" Width="100px"></asp:TextBox>
-                        &nbsp;<img id="imgTu_Ngay" runat="server" alt="Click vào để chọn ngày" 
-                            src="~/Images/calendar_24.gif"  onclick="javascript:return displayCalendar(txt_TuNgay, 'dd/mm/yyyy',this)"
-                            style="cursor: pointer; vertical-align:middle;" /> <span class="style12">
-                        (dd/mm/yyyy)</span></td>
-                </tr>
-                <tr>
-                    <td align="left" class="style10">
-                        Mã đội CSGT</td>
-
-                    <td align="left" class="style11">
-                        <asp:TextBox ID="txtMa_Doi" runat="server" Width="135px"></asp:TextBox>
+		            <td align="left" class="style10">Đội CSGT</td>
+		            <td align="left" class="style11">
+                                        <asp:DropDownList ID="DropDownListDoi_CSGT" runat="server" Width="321px" Height="16px">
+                        </asp:DropDownList>
+                                        </td>
+	            </tr>
+                  <tr>
+		            <td align="left" class="style10">Dòng bắt đầu giao dịch</td>
+		            <td align="left" class="style11">
+                        <asp:TextBox ID="textboxDong_Bat_Dau" runat="server" value="3" Width="135px"></asp:TextBox>
+                                        </td>
+	            </tr>
+	            <tr>
+		            <td align="left" class="style10">&nbsp;</td>
+		            <td align="left" class="style11">
                         &nbsp;</td>
-
-                </tr>
+	            </tr>
+                
                 <tr>
                     <td align="center" colspan="2">
-                        <asp:Button ID="tOk" runat="server" onclick="tOk_Click" Text="Đăng ký" />
+                        <asp:Button ID="tOk" runat="server" onclick="tOk_Click" Text="Upload" />
                     </td>
                 </tr>
                 <tr>
@@ -178,26 +170,22 @@
                                     <ItemStyle Font-Bold="true" HorizontalAlign="left" Width="0%" />
                                 </asp:TemplateField>
                                 
-                                <asp:TemplateField HeaderText="Số quyết định">
+                                <%--<asp:TemplateField HeaderText="Số quyết định">
                                     <ItemTemplate>
                                         <asp:HyperLink ID="VIEW_1" runat="server" 
-                                            NavigateUrl='<%# "rQuyetDinh.aspx?ID=" + Eval("ID")%>' 
+                                            NavigateUrl='<%# "viewBHXHct.aspx?ID=" + Eval("ID")%>' 
                                             Text='<%# Eval("SO_QD")%>' ToolTip="Nhắp chuột vào đây để xem">
 					                </asp:HyperLink>
                                     </ItemTemplate>
-                                    <ItemStyle Font-Bold="true" HorizontalAlign="center" Width="50" />
-                                </asp:TemplateField>
-                                <%--<asp:BoundField AccessibleHeaderText="Số quyết định" DataField="SO_QD" 
+                                    <ItemStyle Font-Bold="true" HorizontalAlign="left" Width="50" />
+                                </asp:TemplateField>--%>
+                                <asp:BoundField AccessibleHeaderText="Số quyết định" DataField="SO_QD" 
                                     HeaderText="Số quyết định">
                                     <ItemStyle HorizontalAlign="left"  />
-                                </asp:BoundField>--%>
-                                <asp:BoundField AccessibleHeaderText="Ngày ra QĐ" DataField="NGAY_QD" 
-                                    HeaderText="Ngày ra QĐ">
-                                    <ItemStyle HorizontalAlign="center"  />
                                 </asp:BoundField>
                                 <asp:BoundField AccessibleHeaderText="Ngày lập BB" DataField="NGAY_BB" 
                                     HeaderText="Ngày lập BB">
-                                    <ItemStyle HorizontalAlign="center"  />
+                                    <ItemStyle HorizontalAlign="left"  />
                                 </asp:BoundField>
                                 <asp:BoundField AccessibleHeaderText="Tên vi phạm" DataField="NGUOI_VP" 
                                     HeaderText="Tên vi phạm">
@@ -205,21 +193,11 @@
                                 </asp:BoundField>
                                 <asp:BoundField AccessibleHeaderText="Số xe" DataField="SO_XE" 
                                     HeaderText="Số xe">
-                                    <ItemStyle HorizontalAlign="center"  />
+                                    <ItemStyle HorizontalAlign="left"  />
                                 </asp:BoundField>
-                                <%--<asp:BoundField AccessibleHeaderText="Tiền phạt" DataField="SO_TIEN" 
+                                <asp:BoundField AccessibleHeaderText="Tiền phạt" DataField="SO_TIEN" 
                                     HeaderText="Tiền phạt">
                                     <ItemStyle HorizontalAlign="right"  />
-                                </asp:BoundField>--%>
-                                <asp:TemplateField HeaderText="Tiền phạt">
-                                    <ItemTemplate>
-                                        <asp:Label ID="SO_TIEN" runat="server" Text='<%# Eval("SO_TIEN", "{0:0,00}")%>'  ></asp:Label>
-                                    </ItemTemplate>
-                                    <ItemStyle Font-Bold="true" HorizontalAlign="right" Width="50" />
-                                </asp:TemplateField>
-                                <asp:BoundField AccessibleHeaderText="Tước GPLX đến" DataField="TUOC_GPLX_DEN_NGAY" 
-                                    HeaderText="Tước GPLX đến">
-                                    <ItemStyle HorizontalAlign="center"  />
                                 </asp:BoundField>
                             </Columns>
                             <PagerStyle HorizontalAlign="Right" />
@@ -247,6 +225,9 @@
 
 
     </center>
+
+
+    <asp:HiddenField ID="hidField1" runat="server" />
 
 
 </form>

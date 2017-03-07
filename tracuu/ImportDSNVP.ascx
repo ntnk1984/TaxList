@@ -14,7 +14,7 @@
                     bordercolor="#FF9900">
 		        <p align="left"><b><font color="#FF9900">Upload dữ liệu quyết định</font></b></td>
 	        </tr>
-	        <tr>
+	        <%--<tr>
 		            <td align="left" class="style10">Mã nghiệp vụ PP </td>
 		            <td align="left" class="style11">
                                                 
@@ -24,8 +24,8 @@
                                             <asp:ListItem>5002</asp:ListItem>
                         </asp:DropDownList>
                                         &nbsp;</td>
-	            </tr>
-    <tr>
+	            </tr>--%>
+    <%--<tr>
 		            <td align="left" class="style10"></td>
 		            <td align="left" class="style11">
                                                 
@@ -35,25 +35,25 @@
                                             <asp:ListItem  >02</asp:ListItem>
                         </asp:DropDownList>
                                         </td>
-	            </tr>
+	            </tr>--%>
                 <tr>
 		            <td align="left" class="style10">Chọn file</td>
 		            <td align="left" class="style11">
                                                 
                                         
                         <asp:FileUpload ID="FileUpload" runat="server" />
-                                        <asp:HyperLink ID="HyperLink1" runat="server" 
+                                       <%-- <asp:HyperLink ID="HyperLink1" runat="server" 
                             NavigateUrl="~/fileMau_5002.xls">File import mẫu 5002</asp:HyperLink><asp:HyperLink ID="HyperLink2" runat="server" 
-                            NavigateUrl="~/fileMau_5001.xls">File import mẫu 5001</asp:HyperLink>
+                            NavigateUrl="~/fileMau_5001.xls">File import mẫu 5001</asp:HyperLink>--%>
                                         </td>
 	            </tr>
-                <tr>
+                <%--<tr>
 		            <td align="left" class="style10">Đội CSGT</td>
 		            <td align="left" class="style11">
                                         <asp:DropDownList ID="DropDownListDoi_CSGT" runat="server" Width="321px" Height="16px">
                         </asp:DropDownList>
                                         </td>
-	            </tr>
+	            </tr>--%>
                 
 	            <tr>
 		            <td colspan="2" align="left">Lưu ý: tên file không sử dụng dấu "."</td>

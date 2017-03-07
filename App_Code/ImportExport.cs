@@ -25,7 +25,8 @@ namespace TTGTVT
 
         public static DataSet ImportToDataset(string fileName)
         {
-                string constr = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileName + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1'";
+            string constr = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileName + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1'";
+                //string constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties='Excel 12.0;HDR=YES;IMEX=1'";
 
                 DbProviderFactory factory = DbProviderFactories.GetFactory("System.Data.OleDb");
 
