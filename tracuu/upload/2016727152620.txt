@@ -1,0 +1,17 @@
+﻿2016727152620.txt 
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 27 tháng 7 năm 2016 giờ 15 phút 26 giây 20
+Dòng 1 import không thành công. Incorrect syntax near ','.
+Dòng 3 import không thành công. Incorrect syntax near ','.
+Dòng 5 import không thành công. Incorrect syntax near ','.
+Dòng 7 import không thành công. Incorrect syntax near ','.
+Dòng 9 import không thành công. Incorrect syntax near ','.
+Dòng 11 import không thành công. Incorrect syntax near ','.
+Dòng 13 import không thành công. Incorrect syntax near ','.
+Dòng 15 import không thành công. Incorrect syntax near ','.
+Dòng 17 import không thành công. Incorrect syntax near ','.
+Dòng 19 import không thành công. Incorrect syntax near ','.
+Dòng 21 import không thành công. Incorrect syntax near ','.
+Thời gian kết thúc: ngày 27 tháng 7 năm 2016 giờ 15 phút 26 giây 20
+Kết thúc Import ... 
+Số records: 68

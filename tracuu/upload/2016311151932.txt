@@ -1,0 +1,6 @@
+﻿2016311151932.txt 2016311ttsgtvt
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 11 tháng 3 năm 2016 giờ 15 phút 19 giây 32
+Thời gian kết thúc: ngày 11 tháng 3 năm 2016 giờ 15 phút 19 giây 32
+Kết thúc Import ... 
+Số records: 9

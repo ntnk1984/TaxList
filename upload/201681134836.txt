@@ -1,0 +1,6 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 1 tháng 8 năm 2016 giờ 13 phút 48 giây 36
+Lỗi Cannot find column 16.
+Thời gian kết thúc: ngày 1 tháng 8 năm 2016 giờ 13 phút 48 giây 36
+Kết thúc Import ... 
+Số records: 576

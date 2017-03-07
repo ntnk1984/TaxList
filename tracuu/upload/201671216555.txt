@@ -1,0 +1,9 @@
+﻿201671216555.txt 2016712ttsgtvt
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 12 tháng 7 năm 2016 giờ 16 phút 5 giây 55
+Dòng 3 import không thành công. Invalid column name 'xxxxxxx'.
+Dòng 6 import không thành công. The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+Thời gian kết thúc: ngày 12 tháng 7 năm 2016 giờ 16 phút 5 giây 55
+Kết thúc Import ... 
+Số records: 9

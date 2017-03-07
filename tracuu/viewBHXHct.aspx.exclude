@@ -1,0 +1,366 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="viewBHXHct.aspx.cs" Inherits="viewBHXHct" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>BHXH</title>
+    <link type="text/css"  href="../Stylesheet.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/Inc/D_calendar.css" media="screen" />
+    <script language="javascript" type="text/javascript" src="/Inc/cos_lib.js"></script>    
+    <script language="javascript" type="text/javascript" src="/Inc/D_calendar.js"></script>
+    
+    <style type="text/css">
+        .style5
+        {
+            width: 100%;
+            height: 163px;
+        }
+        .style6
+        {
+            width: 100%;
+            height: 163px;
+        }
+        .text {
+	        font-family: Verdana, Arial, Helvetica, sans-serif;
+	        font-size: 11px;
+	        font-weight: bold;
+	        color: #FFFFFF;
+	        text-decoration: none;
+        }
+        </style>
+</head>
+<body bottommargin=0 topmargin="0" leftmargin="0" rightmargin="0">
+   <form id="form1" runat="server">
+<center>
+<table width="100%" height="112"  border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="73" background="../images/topbg.gif"><table width=100% border=0 align="center" cellpadding=0 cellspacing=0>
+      <tr>
+        <td width="12"> <img src="../images/topleft.gif" width="12" height="73"></td>
+        <td width="265" background="../images/logovnpt.gif" height="73"> 
+		    &nbsp;</td>
+        <td colspan=2 valign="top" bgcolor="#FFFFFF"><table width="100%"  border="0" cellspacing="0" cellpadding="5">
+          <tr>
+            <td align="center">
+                <img border="0" src="../images/BANNER_CD.jpg" width="400" height="36"></td>
+          </tr>
+        </table> </td>
+        <td width="14"> <img src="../images/topright.gif" width=14 height=73></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td height="36" background="../images/subnavbg.gif"><table width=100% border=0 align="center" cellpadding=0 cellspacing=0>
+      <tr>
+        <td width="12"> <img src="../images/subnavleft.gif" width=12 height=36></td>
+        <td align="right" class="text">&nbsp;  
+            Copyright @2015 Bưu Điện TP Hồ Chí Minh&nbsp;  
+            </td>
+        <td width="14"> <img src="../images/subnavright.gif" width=14 height=36></td>
+      </tr>
+    </table></td>
+  </tr>
+   <tr>
+    <td height="36"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="12" valign="top"> 
+            <table background="../images/sidebg1.gif" cellpadding="0" cellspacing="0" 
+                class="style6">
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+            </table>
+          </td>
+        <td align="center">
+            <br />
+    <asp:Panel ID="PnlMain" runat="server">
+    <table id="Main" width="600" >
+    <tr>
+        <td align="center"><table id="left" width="100%" border="0" style="border-bottom: solid #3366FF  1.0pt; border-left: solid #3366FF  1.0pt; border-right: solid #3366FF  1.0pt; border-top: solid #3366FF  1.0pt">
+        <tr>
+            <td align="center">
+                <table id="Table2">
+                <tr>
+                    <td align="left" class="menuItem" colspan="7" style=" font-weight:bold; BORDER-BOTTOM:#FF0066 1px solid;color:#FF0066">
+                        <asp:Label ID="lblCaption" runat="server"></asp:Label><asp:Label ID="lblID" 
+                            runat="server" Visible="False"></asp:Label></td>
+                </tr>
+                <tr>
+                    <td align="left" width="100px" class="style4" >Ngày đăng ký</td>
+                    <td  width="10px">&nbsp;</td>
+                    <td  width="200px" align="left">
+                        <asp:Label ID="lblNGAY_DK" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    <td  width="10px">&nbsp;</td>
+                    <td align="left" width="100px" class="style4">Mã đơn vị</td>
+                    <td  width="10px">&nbsp;</td>
+                    <td  width="200px" align="left" class="style4">
+                        <asp:Label ID="lblMA_DN" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                    </td>
+                </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Tên đơn vị</td>
+                        <td width="10px">
+                        </td>
+                        <td align="left" class="style4" colspan="5">
+                            <asp:Label ID="lblTEN_DN" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Người liên hệ</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNGUOI_LH" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="100px" class="style4">
+                            Điện thoại</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblDIEN_THOAI" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Địa chỉ</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" valign="middle" colspan="5">
+                            <asp:Label ID="lblDIA_CHI" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Số hiệu</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblSO_HIEU" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="100px" class="style4">
+                            Bưu tá phân công</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblMA_BT" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="style4" width="100px">
+                            Bưu tá thực nhận</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="200px">
+                            <asp:Label ID="lblNG_NHAN" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="100px">
+                            Ngày nhận</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="200px">
+                            <asp:Label ID="lblNGAY_NHAN" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="style4" width="100px">
+                            Bưu cục gửi</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="200px">
+                            <asp:Label ID="lblBC_GUI" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="100px">
+                            Ngày gửi</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" width="200px">
+                            <asp:Label ID="lblNGAY_GUI" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Người hủy</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNG_HUY" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="100px" class="style4">
+                            Ngày hủy</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNGAY_HUY" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" class="style4" width="100px">
+                            Lý do hủy</td>
+                        <td width="10px">
+                            &nbsp;</td>
+                        <td align="left" class="style4" colspan="5">
+                            <asp:Label ID="lblLD_HUY" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                <tr>
+                    <td  colspan="7" align="center" >
+                        <asp:Label ID="lb_thongbao" runat="server" Font-Bold="True" ForeColor="#FF0066"></asp:Label>
+                    </td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+        </table>
+        </td>
+    </tr>
+    <tr>
+        <td align="center">
+        <table id="Table1" width="100%" border="0" style="border-bottom: solid #3366FF  1.0pt; border-left: solid #3366FF  1.0pt; border-right: solid #3366FF  1.0pt; border-top: solid #3366FF  1.0pt">
+        <tr>
+            <td align="center">
+                <table ID="Table4">
+                    <tr>
+                        <td align="left" class="menuItem" colspan="7" 
+                            style=" font-weight:bold; BORDER-BOTTOM:#00FF66 1px solid;color:#00FF66">
+                            THÔNG TIN CHUYỂN HS CHO CQ BHXH</td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Ngày chuyển</td>
+                        <td width="10px" class="style4">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNgay_Phat" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px" class="style4">
+                            &nbsp;</td>
+                        <td align="left" width="100px" class="style4">
+                            Người chuyển</td>
+                        <td width="10px" class="style4">
+                            &nbsp;</td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNguoi_Phat" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left" width="100px" class="style4">
+                            Trạng thái</td>
+                        <td width="10px">
+                        </td>
+                        <td align="left" width="200px"  class="style4">
+                            <asp:Label ID="lblTrang_Thai" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                        <td width="10px">
+                        </td>
+                        <td align="left" width="100px" class="style4">
+                            Người nhận (BHXH)</td>
+                        <td width="10px">
+                        </td>
+                        <td align="left" width="200px" class="style4">
+                            <asp:Label ID="lblNguoi_Nhan_That" runat="server" Font-Bold="True" Text="Label"></asp:Label>
+                        </td>
+                    </tr>
+                </table>
+                </br>
+                <table ID="Table5" width="650px" >
+                    <tr>
+                        <td align="left" class="menuItem" 
+                            style=" font-weight:bold; BORDER-BOTTOM:#00FF66 1px solid;color:#00FF66">
+                            THÔNG TIN LỊCH SỬ</td>
+                    </tr>
+                    <tr>
+                        <td align="center">
+                            <asp:GridView ID="DANHMUC" runat="server" AllowPaging="false" 
+                                AllowSorting="false" AlternatingRowStyle-CssClass="alternate" 
+                                AutoGenerateColumns="False" CellPadding="4" CssClass="grid-view" 
+                                DataKeyNames="ID" HeaderStyle-CssClass="header" 
+                                meta:resourcekey="DANHMUCResource" 
+                                PagerSettings-PageButtonCount="10" PagerStyle-HorizontalAlign="Right" 
+                                RowStyle-CssClass="normal" Width="98%">
+                                <RowStyle CssClass="normal" />
+                                <Columns>
+                                    <asp:TemplateField HeaderText="ID" Visible="false">
+                                        <ItemTemplate>
+                                            <asp:Label ID="lblID0" runat="server" Text='<%# Eval("ID")%>'> </asp:Label>
+                                        </ItemTemplate>
+                                        <ItemStyle Font-Bold="true" HorizontalAlign="left" Width="0%" />
+                                    </asp:TemplateField>
+                                    <asp:BoundField AccessibleHeaderText="Ngày" DataField="NGAY" 
+                                        HeaderText="Ngày" SortExpression="NGAY">
+                                        <ItemStyle HorizontalAlign="left" Width="10%" />
+                                    </asp:BoundField>
+                                    <asp:BoundField AccessibleHeaderText="Người" DataField="NGUOI" 
+                                        HeaderText="Người" SortExpression="NGUOI">
+                                        <ItemStyle HorizontalAlign="left" Width="10%" />
+                                    </asp:BoundField>
+                                    <asp:BoundField AccessibleHeaderText="Thao tác" DataField="THAO_TAC" 
+                                        HeaderText="Thao tác" SortExpression="THAO_TAC">
+                                        <ItemStyle HorizontalAlign="left" Width="10%" />
+                                    </asp:BoundField>
+                                    <asp:BoundField AccessibleHeaderText="Ghi chú" DataField="GHI_CHU" 
+                                        HeaderText="Ghi chú" SortExpression="GHI_CHU">
+                                        <ItemStyle HorizontalAlign="left" Width="70%" />
+                                    </asp:BoundField>
+                                    
+                                </Columns>
+                                <PagerStyle HorizontalAlign="Right" />
+                                <HeaderStyle CssClass="header" />
+                                <AlternatingRowStyle CssClass="alternate" />
+                            </asp:GridView>
+                        </td>
+                    </tr>
+                </table>
+       	</td>
+        </tr>
+    </table>
+
+        </td>
+    </tr>
+</table>
+<center>
+    <br>
+    <asp:Button ID="cmdCancel" runat="server" onclick="cmdCancel_Click" 
+        Text="Quay về" Width="80px" />
+    <br></br>
+    </br>
+        </center>
+    </asp:Panel>
+    
+    
+            </td>
+        <td width="14" valign="top"> 
+            <table background="../images/sidebg1.gif" cellpadding="0" cellspacing="0" 
+                class="style5">
+                <tr>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+            </table>
+          </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+    </center>
+
+
+</form>
+
+    </body>
+</html>

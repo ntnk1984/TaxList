@@ -1,0 +1,72 @@
+function CheckAll(checkAllBox)							
+{														
+	var frm = document.Form1;
+	var ChkState=checkAllBox.checked;
+	for(i=0;i< frm.length;i++)
+	{														
+		e=frm.elements[i];									
+	    if(e.type=='checkbox' && e.name.indexOf('Chk_List') != -1)
+		{ 
+		    e.checked= ChkState ;
+		}
+	}	
+	if (ChkState!=true)
+	{
+	    document.Form1.del.disabled=true;
+	}
+	else
+    {
+	    document.Form1.del.disabled=false;
+	}														
+}
+
+function CheckChanged()										
+{															
+	var frm = document.Form1;									
+	var boolAllChecked;				  									
+	boolAllChecked=true;										
+	for(i=0;i< frm.length;i++)				
+	{															
+		e=frm.elements[i];										
+		if ( e.type=='checkbox' && e.name.indexOf('Chk_List') != -1 ) 
+        {
+               if(e.checked== false)									
+			   {														
+				    boolAllChecked=false;								
+					break;												
+			   }
+		}			      													
+	}			  
+	for(i=0;i< frm.length;i++)								
+	{															
+		e=frm.elements[i];										
+		if ( e.type=='checkbox' && e.name.indexOf('Chk_List') != -1 )
+		{														
+		    if(e.checked==false)
+		    {							
+				document.Form1.del.disabled=true;
+		    }
+		    else
+		    {
+		        document.Form1.del.disabled=false;									
+		        break;
+		    }												
+		}														
+	}			   											
+	for(i=0;i< frm.length;i++)								
+	{															
+		e=frm.elements[i];										
+		if ( e.type=='checkbox' && e.name.indexOf('ChkAll') != -1 )
+		{														
+		    if( boolAllChecked==false)							
+			{
+			    e.checked= false ;									
+			}
+			else												
+			{
+				e.checked= true;									
+		        break;												
+		    }
+		}														
+	}    
+}

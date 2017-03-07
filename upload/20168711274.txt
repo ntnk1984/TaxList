@@ -1,0 +1,6 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 7 tháng 8 năm 2016 giờ 11 phút 27 giây 4
+Lỗi Index was outside the bounds of the array.
+Thời gian kết thúc: ngày 7 tháng 8 năm 2016 giờ 11 phút 27 giây 4
+Kết thúc Import ... 
+Số records: 13

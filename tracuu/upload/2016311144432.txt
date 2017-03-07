@@ -1,0 +1,6 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 11 tháng 3 năm 2016 giờ 14 phút 44 giây 32
+Dòng 2 import không thành công. Invalid column name 'xxxxxx'.
+Dòng 6 import không thành công. The conversion of a varchar data type to a datetime data type resulted in an out-of-range value.
+The statement has been terminated.
+Thời gian kết thúc: ngày 11 tháng 3 năm 2016 giờ 14 phút 44 giây 32

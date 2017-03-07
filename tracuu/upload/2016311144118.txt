@@ -1,0 +1,21 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 11 tháng 3 năm 2016 giờ 14 phút 41 giây 18
+Dòng 1 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 2 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 3 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 4 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 5 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 6 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 7 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 8 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Dòng 9 import không thành công. Unclosed quotation mark after the character string '2016311ttsgtvt) '.
+Incorrect syntax near '2016311ttsgtvt) '.
+Thời gian kết thúc: ngày 11 tháng 3 năm 2016 giờ 14 phút 41 giây 18

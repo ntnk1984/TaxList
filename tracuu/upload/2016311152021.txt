@@ -1,0 +1,7 @@
+﻿2016311152021.txt 2016311ttsgtvt
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 11 tháng 3 năm 2016 giờ 15 phút 20 giây 21
+Dòng 3 import không thành công. Invalid column name 'xxxxxxx'.
+Thời gian kết thúc: ngày 11 tháng 3 năm 2016 giờ 15 phút 20 giây 21
+Kết thúc Import ... 
+Số records: 9

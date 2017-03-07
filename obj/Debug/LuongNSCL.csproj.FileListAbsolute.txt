@@ -1,0 +1,2 @@
+D:\project\LuongNSCL\obj\Debug\ResolveAssemblyReference.cache
+D:\project\Luong\LuongNSCL\obj\Debug\ResolveAssemblyReference.cache

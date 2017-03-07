@@ -1,0 +1,186 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Security.Cryptography;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Drawing.Imaging;
+using System.Text;
+
+
+public partial class viewBHXHct : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!Page.IsPostBack)
+        {
+            lblCaption.Text = "THÔNG TIN ĐĂNG KÝ";
+            lblID.Text = ClsTools.Tools.FormatInput((Request.QueryString["ID"] != null ? Request.QueryString["ID"].ToString().Trim() : ""));
+            LoadData(lblID.Text);
+            LoadDataList(lblID.Text);
+            LoadDinhVi(lblSO_HIEU.Text);
+        }
+    }
+    private void LoadData(string DANHMUC_ID)
+    {
+
+        string strSQL = "select CONVERT(VARCHAR, NGAY_DK, 113) AS NGAY_DK, MA_DN, TEN_DN, DC_DN, NGUOI_LH, DIEN_THOAI,SO_HIEU, MA_BT,NG_NHAN, CONVERT(VARCHAR, NGAY_NHAN, 113) AS NGAY_NHAN, BC_GUI, CONVERT(VARCHAR, NGAY_GUI, 113) AS NGAY_GUI, NG_HUY_TIN, CONVERT(VARCHAR, NGAY_HUY_TIN, 113) AS NGAY_HUY_TIN, LD_HUY_TIN from DANG_KY with(nolock) where ID='" + DANHMUC_ID + "'";
+
+        string strConn = ConfigurationSettings.AppSettings["ConStr"];
+        SqlConnection conn = new SqlConnection(strConn);
+        conn.Open();
+        SqlCommand cmd = new SqlCommand(strSQL, conn);
+        SqlDataReader rdr = null;
+        try
+        {
+            rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                lblNGAY_DK.Text = rdr["NGAY_DK"].ToString(); // ClsTools.Tools.FormatDateVN_HMS(rdr["NGAY_DK"].ToString()).ToString();
+                lblMA_DN.Text = rdr["MA_DN"].ToString();
+                lblTEN_DN.Text = rdr["TEN_DN"].ToString();
+                lblDIA_CHI.Text = rdr["DC_DN"].ToString();
+                lblNGUOI_LH.Text = rdr["NGUOI_LH"].ToString();
+                lblDIEN_THOAI.Text = rdr["DIEN_THOAI"].ToString();
+                lblSO_HIEU.Text = rdr["SO_HIEU"].ToString();
+                lblMA_BT.Text = rdr["MA_BT"].ToString();
+
+                lblNG_NHAN.Text = rdr["NG_NHAN"].ToString();
+                //if (rdr["NGAY_NHAN"].ToString().Length > 0)
+                //    lblNGAY_NHAN.Text = ClsTools.Tools.FormatDateVN_HMS(rdr["NGAY_NHAN"].ToString()).ToString();
+                //else
+                //    lblNGAY_NHAN.Text = "";
+                lblNGAY_NHAN.Text = rdr["NGAY_NHAN"].ToString();
+
+                lblBC_GUI.Text = rdr["BC_GUI"].ToString();
+                lblNGAY_GUI.Text = rdr["NGAY_GUI"].ToString();
+                //if (rdr["NGAY_GUI"].ToString().Length > 0)
+                //    lblNGAY_GUI.Text = ClsTools.Tools.FormatDateVN_HMS(rdr["NGAY_GUI"].ToString()).ToString();
+                //else
+                //    lblNGAY_GUI.Text = "";
+
+                lblNG_HUY.Text = rdr["NG_HUY_TIN"].ToString();
+                lblNGAY_HUY.Text = rdr["NGAY_HUY_TIN"].ToString();
+                //if (rdr["NGAY_HUY_TIN"].ToString().Length > 0)
+                //    lblNGAY_HUY.Text = ClsTools.Tools.FormatDateVN_HMS(rdr["NGAY_HUY_TIN"].ToString()).ToString();
+                //else
+                //    lblNGAY_HUY.Text = "";
+                lblLD_HUY.Text = rdr["LD_HUY_TIN"].ToString();
+            }
+            else
+            {
+                lblMA_DN.Text = "";
+                this.lb_thongbao.Text = "Không tìm thấy đăng ký.";
+            }
+        }
+        catch (Exception e)
+        {
+            Response.Write(e.Message);
+            Response.End();
+        }
+        finally
+        {
+        }
+        conn.Close();
+    }
+    private void LoadDataList(string DANHMUC_ID)
+    {
+        string strSQL = "SELECT ID, convert(varchar, [NGAY], 113) as NGAY, NGUOI, THAO_TAC, GHI_CHU FROM QT_LICH_SU WHERE ID_TIN ='" + DANHMUC_ID + "' order by NGAY";
+
+        string strConn;
+        strConn = ConfigurationSettings.AppSettings["ConStr"];
+        SqlConnection conn = new SqlConnection(strConn);
+        conn.Open();
+        SqlCommand cmd = new SqlCommand(strSQL, conn);
+        SqlDataReader rdr = null;
+        DataTable dt = new DataTable();
+        try
+        {
+            rdr = cmd.ExecuteReader();
+            dt.Load(rdr);
+
+            if (dt.Rows.Count > 0)
+            {
+                this.DANHMUC.DataSource = dt;
+                this.DANHMUC.DataBind();
+            }
+            else
+            {
+                this.DANHMUC.Controls.Clear();
+            }
+            dt.Dispose();
+        }
+        catch (Exception e)
+        {
+            Response.Write(e.Message);
+            Response.End();
+        }
+    }
+    private void LoadDinhVi(string sSO_HIEU)
+    {
+
+        string strSQL = "select * from ho_so with(nolock) where SO_HIEU='" + sSO_HIEU + "'";
+
+        string strConn = ConfigurationSettings.AppSettings["ConStr_HCC"];
+        SqlConnection conn = new SqlConnection(strConn);
+        conn.Open();
+        SqlCommand cmd = new SqlCommand(strSQL, conn);
+        SqlDataReader rdr = null;
+        try
+        {
+            rdr = cmd.ExecuteReader();
+
+            if (rdr.Read())
+            {
+                ////////// thong tin phat
+                if (rdr["NGAY_PHAT"].ToString() == "")
+                    lblNgay_Phat.Text = "";
+                else
+                    lblNgay_Phat.Text = ClsTools.Tools.FormatDateVN(rdr["NGAY_PHAT"].ToString()).ToString().Substring(0, 10); ;
+                lblNguoi_Phat.Text = rdr["NG_PHAT"].ToString();
+
+                lblNguoi_Nhan_That.Text = rdr["NGUOI_NHAN_THAT"].ToString();
+
+                if (rdr["TRANG_THAI"].ToString() == "2")
+                    lblTrang_Thai.Text = "Phát thành công";
+                else
+                    if (rdr["TRANG_THAI"].ToString() == "7")
+                        lblTrang_Thai.Text = "Phát hoàn";
+                    else
+                        lblTrang_Thai.Text = "Chưa phát được";
+            }
+            else
+            {
+                lblNgay_Phat.Text = "";
+                lblNguoi_Phat.Text = "";
+                lblTrang_Thai.Text = "";
+                lblNguoi_Nhan_That.Text = "";
+            }
+        }
+        catch (Exception e)
+        {
+            Response.Write(e.Message);
+            Response.End();
+        }
+        finally
+        {
+        }
+        conn.Close();
+    }
+    protected void cmdCancel_Click(object sender, EventArgs e)
+    {
+        Page.RegisterStartupScript("goBack", "<script type='text/javascript' language='javascript'>window.history.go(-2);</script>");
+    }
+}

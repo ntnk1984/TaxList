@@ -1,0 +1,6 @@
+﻿2016727154054.txt 
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 27 tháng 7 năm 2016 giờ 15 phút 40 giây 54
+Thời gian kết thúc: ngày 27 tháng 7 năm 2016 giờ 15 phút 40 giây 54
+Kết thúc Import ... 
+Số records: 68

@@ -1,0 +1,8 @@
+﻿20167271592.txt 
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 27 tháng 7 năm 2016 giờ 15 phút 9 giây 2
+Lỗi Index and length must refer to a location within the string.
+Parameter name: length
+Thời gian kết thúc: ngày 27 tháng 7 năm 2016 giờ 15 phút 9 giây 2
+Kết thúc Import ... 
+Số records: 68

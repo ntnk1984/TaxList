@@ -1,0 +1,7 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 17 tháng 11 năm 2016 giờ 11 phút 18 giây 2
+Lỗi Unclosed quotation mark after the character string '70000153;'.
+Incorrect syntax near '70000153;'.
+Thời gian kết thúc: ngày 17 tháng 11 năm 2016 giờ 11 phút 18 giây 2
+Kết thúc Import ... 
+Số records: 41

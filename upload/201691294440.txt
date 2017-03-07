@@ -1,0 +1,7 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 12 tháng 9 năm 2016 giờ 9 phút 44 giây 40
+Dòng 29 import không thành công. Incorrect syntax near ','.
+Dòng 33 import không thành công. Incorrect syntax near ','.
+Thời gian kết thúc: ngày 12 tháng 9 năm 2016 giờ 9 phút 44 giây 40
+Kết thúc Import ... 
+Số records: 19

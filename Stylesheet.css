@@ -1,0 +1,145 @@
+﻿.menustyle { font-size: 10pt; font-family: Verdana; color: #ffffff; background-color: #000000; font-weight: bold; cursor: default}
+.pagecolor {BACKGROUND-COLOR:#99CCFF}
+.inputform  {
+    	BACKGROUND-COLOR : transparent;
+    	BORDER-BOTTOM : 1px;
+    	BORDER-LEFT : 1px;
+    	BORDER-RIGHT : 1px;
+    	BORDER-TOP : 1px;
+    	MARGIN : 1px;
+    	PADDING-BOTTOM : 1px;
+    	PADDING-LEFT : 1px;
+    	PADDING-RIGHT : 1px;
+    	PADDING-TOP : 1px;
+    	margin-left : 1px;
+    	margin-right : 1px;
+    	margin-top : 1px;
+    	border-color : #6FA3E1;
+    	border-style : solid;
+    }
+            .style1
+        {
+            width: 162px;
+        }
+        .style2
+        {
+            width: 570px;
+        }
+        .style3
+        {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+.dgrd_header
+{
+	background-color:#008080;
+	font-weight:bolder; color:White; text-align:center;
+}
+.grid-view
+{   
+   border: 1px solid Silver;
+   font-family: Arial, Tahoma, Times New Roman, Verdana, Helvetica, sans-serif;
+   font-size: 12px;
+}
+.grid-view tr.header
+{   
+   color: Navy;	
+   background-color: #C2DCFF;   
+   vertical-align: top;
+   text-align: center;
+   font-weight: bold;
+}
+
+.grid-view tr.normal
+{
+   color: black;
+   background-color: White;   
+   vertical-align: top;   
+}
+
+.grid-view tr.alternate
+{
+   color: black;
+   background-color: #F5F5F5;   
+   vertical-align: top;  
+}
+.grid-view tr.normal:hover, .grid-view tr.alternate:hover
+{
+   background-color: #FFDEAD;
+   color: black;
+   font-weight: bold;
+   vertical-align: top;
+}
+.menuLink {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #2091FF;
+	text-decoration: none;
+}
+.menuLink2 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+a.menuLink:hover {
+text-decoration: underline;
+}
+.Sessionlbl {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.menuItem {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #2091FF;
+}
+.highlighteditem  
+{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px; 
+	font-weight: bold; 
+	color: #c00000; 
+	cursor: default
+}
+.grdHdr {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.lblNote {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF3399;
+}
+h1 {
+	font-family: Tahoma;
+	font-size: 18px;
+	font-weight: bold;
+	color: #FF0066;
+	width: 406px;
+}
+body, td, p, select, input, textarea {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #545454;
+	}
+body
+{
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-top:0px;
+	margin-right:0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #545454;
+}

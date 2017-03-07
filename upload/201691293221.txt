@@ -1,0 +1,7 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 12 tháng 9 năm 2016 giờ 9 phút 32 giây 21
+Lỗi Index and length must refer to a location within the string.
+Parameter name: length
+Thời gian kết thúc: ngày 12 tháng 9 năm 2016 giờ 9 phút 32 giây 21
+Kết thúc Import ... 
+Số records: 1277

@@ -1,0 +1,7 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 31 tháng 8 năm 2016 giờ 17 phút 29 giây 41
+Lỗi startIndex cannot be larger than length of string.
+Parameter name: startIndex
+Thời gian kết thúc: ngày 31 tháng 8 năm 2016 giờ 17 phút 29 giây 41
+Kết thúc Import ... 
+Số records: 1238

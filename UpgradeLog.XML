@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="LuongNSCL">
+</Property><Property Name="Solution File" Value="C:\Documents and Settings\Huong Lan\My Documents\Visual Studio 2008\Projects\LuongNSCL\LuongNSCL.sln">
+</Property><Property Name="Date" Value="Thursday, July 24, 2008">
+</Property><Property Name="Time" Value="15:37:06 PM">
+</Property></Properties><Event ErrorLevel="0" Project="skmMenu" Source="D:\project\LuongNSCL\skmMenu2.2\skmMenu.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="skmMenu" Source="D:\project\LuongNSCL\skmMenu2.2\skmMenu.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="skmMenu" Source="D:\project\LuongNSCL\skmMenu2.2\skmMenu.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

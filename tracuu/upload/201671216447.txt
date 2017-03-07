@@ -1,0 +1,15 @@
+﻿201671216447.txt 2016712ttsgtvt
+Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 12 tháng 7 năm 2016 giờ 16 phút 4 giây 47
+Dòng 1 import không thành công. Incorrect syntax near '1'.
+Dòng 2 import không thành công. Incorrect syntax near '2'.
+Dòng 3 import không thành công. Incorrect syntax near '3'.
+Dòng 4 import không thành công. Incorrect syntax near '4'.
+Dòng 5 import không thành công. Incorrect syntax near '5'.
+Dòng 6 import không thành công. Incorrect syntax near '6'.
+Dòng 7 import không thành công. Incorrect syntax near '7'.
+Dòng 8 import không thành công. Incorrect syntax near ''.
+Dòng 9 import không thành công. Incorrect syntax near ''.
+Thời gian kết thúc: ngày 12 tháng 7 năm 2016 giờ 16 phút 4 giây 47
+Kết thúc Import ... 
+Số records: 9

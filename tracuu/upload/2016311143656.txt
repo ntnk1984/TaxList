@@ -1,0 +1,4 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 11 tháng 3 năm 2016 giờ 14 phút 36 giây 56
+Lỗi Cannot find column 6.
+Thời gian kết thúc: ngày 11 tháng 3 năm 2016 giờ 14 phút 36 giây 56

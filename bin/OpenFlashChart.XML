@@ -1,0 +1,1140 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpenFlashChart</name>
+    </assembly>
+    <members>
+        <member name="T:OpenFlashChart.Graph">
+            <summary>
+            Represents the graph object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Graph.ToString">
+            <summary>
+            Converts the graph object to a string of data.
+            </summary>
+            <returns>Returns a string of data representing the graph object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Graph.Data">
+            <summary>
+            Gets or sets the chart data.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LabelsX">
+            <summary>
+            Gets or sets the x-axis label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.MinY">
+            <summary>
+            Gets or sets the minimum y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.MaxY">
+            <summary>
+            Gets or sets the maximum y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.StepsY">
+            <summary>
+            Gets or sets the steps for they y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.TickSizeX">
+            <summary>
+            Gets or sets the tick size on the x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.Title">
+            <summary>
+            Gets or sets the chart title.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.MaxY2">
+            <summary>
+            Gets or sets the maximum right y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.MinY2">
+            <summary>
+            Gets or sets the minimum right y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.AxisColorX">
+            <summary>
+            Gets or sets the color of the x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.AxisX3D">
+            <summary>
+            Gets or sets the size of a 3D x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.GridColorX">
+            <summary>
+            Gets or sets the grid color of the x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.AxisStepsX">
+            <summary>
+            Gets or sets the steps for the x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.AxisColorY">
+            <summary>
+            Gets or sets the color of the y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.GridColorY">
+            <summary>
+            Gets or sets the grid color of the y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.AxisColorYRight">
+            <summary>
+            Gets or sets the color of the right y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LabelStyleX">
+            <summary>
+            Gets or sets the label style of the x-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LabelStyleY">
+            <summary>
+            Gets or sets the label style of the y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LabelStyleYRight">
+            <summary>
+            Gets or sets the label style of the right y-axis.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LegendX">
+            <summary>
+            Gets or sets the x-axis legend.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LegendY">
+            <summary>
+            Gets or sets the y-axis legend.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LegendYRight">
+            <summary>
+            Gets or sets the right y-axis legend.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.Lines">
+            <summary>
+            Gets or sets the lines.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LineDefault">
+            <summary>
+            Gets or sets the default line.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.BgColor">
+            <summary>
+            Gets or sets the chart background color.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.BgImage">
+            <summary>
+            Gets or sets the chart background image.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.InnerBg">
+            <summary>
+            Gets or sets the chart inner background.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.Pie">
+            <summary>
+            Gets or sets the pie data.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.ToolTip">
+            <summary>
+            Gets or sets the tool tip.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Graph.LinesY2">
+            <summary>
+            Gets or sets the right y-axis lines.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.Line">
+            <summary>
+            Represents the Line chart object.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.ChartData">
+            <summary>
+            Represents the ChartData object.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.ChartData.Data">
+            <summary>
+            Gets or sets the list of float(decimal) type data
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Line.#ctor(System.Int32,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Creates an instance of the Line chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+            <param name="circles">A integer value of the size of circles (points).</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Line.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the Line chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Line.ToString">
+            <summary>
+            Converts the Line chart object to a string.
+            </summary>
+            <returns>Returns the string value of the Line chart object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Line.Width">
+            <summary>
+            Gets or sets the line width.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Line.Size">
+            <summary>
+            Gets or sets the label font size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Line.Color">
+            <summary>
+            Gets or sets the color of the line.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Line.Text">
+            <summary>
+            Gets or sets the label text.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Line.Circles">
+            <summary>
+            Gets or sets the size of circles (points).
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.Bar">
+            <summary>
+            Represents the bar chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar.#ctor(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the bar chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the bar chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar.ToString">
+            <summary>
+            Converts the bar object to a string.
+            </summary>
+            <returns>Returns the string value of the bar object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar.Color">
+            <summary>
+            Gets or sets the color of the bar.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar.Size">
+            <summary>
+            Gets or sets the legend label font size.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Title">
+            <summary>
+            Represents the title object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Title.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of the title object.
+            </summary>
+            <param name="text">A string containing the text to display.</param>
+            <param name="style">A string specifying the title style.</param>
+        </member>
+        <member name="M:OpenFlashChart.Title.#ctor(System.String)">
+            <summary>
+            Creates an instance of the title object.
+            </summary>
+            <param name="text">A string containing the text to display.</param>
+        </member>
+        <member name="M:OpenFlashChart.Title.ToString">
+            <summary>
+            Converts the title object to a string.
+            </summary>
+            <returns>Returns a string containing the title and style.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Title.Text">
+            <summary>
+            Gets or sets the title text.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Title.Style">
+            <summary>
+            Gets or sets the title style.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.AreaHollow">
+            <summary>
+            Represents the area hollow chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.AreaHollow.#ctor(System.Int32,System.Int32,System.String,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the AreaHollow object.
+            </summary>
+            <param name="width">An integer value of the line size.</param>
+            <param name="dotsize">An integer value of the dot size.</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+            <param name="alpha">An integer value of the opacity of the line.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="fontsize">A integer value of the legend label font size.</param>
+            <param name="fillcolor">A string representing the color to fill below the line in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.AreaHollow.#ctor(System.Int32,System.Int32,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the AreaHollow object.
+            </summary>
+            <param name="width">An integer value of the line size.</param>
+            <param name="dotsize">An integer value of the dot size.</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+            <param name="alpha">An integer value of the opacity of the line.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.AreaHollow.ToString">
+            <summary>
+            Converts the area hollow object to a string.
+            </summary>
+            <returns>Returns the string value of the area hollow object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.Width">
+            <summary>
+            Gets or sets the width of the line.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.DotSize">
+            <summary>
+            Gets or sets the dot size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.Color">
+            <summary>
+            Gets or sets the line color.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.FontSize">
+            <summary>
+            Gets or sets the font size of the label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.AreaHollow.FillColor">
+            <summary>
+            Gets or sets the color to fill below the line.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.InnerBackground">
+            <summary>
+            Represents the inner background object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.InnerBackground.#ctor(System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the inner background object.
+            </summary>
+            <param name="start">Sets a hex color string value of the starting color.</param>
+            <param name="end">Sets the angle of the gradient between the start and end.</param>
+            <param name="angle">Sets the angle of the gradient between the start and end.</param>
+        </member>
+        <member name="M:OpenFlashChart.InnerBackground.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of the inner background object.
+            </summary>
+            <param name="start">Sets a hex color string value of the starting color.</param>
+            <param name="end">Sets the angle of the gradient between the start and end.</param>
+        </member>
+        <member name="M:OpenFlashChart.InnerBackground.#ctor(System.String)">
+            <summary>
+            Creates an instance of the inner background object.
+            </summary>
+            <param name="start">Sets a hex color string value of the starting color.</param>
+        </member>
+        <member name="M:OpenFlashChart.InnerBackground.ToString">
+            <summary>
+            Converts the InnerBackground object to a string.
+            </summary>
+            <returns>Returns a string representing the InnerBackground object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.InnerBackground.ColorEnd">
+            <summary>
+            Gets or sets a hex color string value of the ending color.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.InnerBackground.ColorStart">
+            <summary>
+            Gets or sets a hex color string value of the starting color.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.InnerBackground.Angle">
+            <summary>
+            Gets or sets the angle of the gradient between the start and end.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.BarFade">
+            <summary>
+            Represents the BarFade chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFade.#ctor(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the BarFade chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFade.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the BarFade chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFade.ToString">
+            <summary>
+            Converts the BarFade object to a string.
+            </summary>
+            <returns>Returns the string value of the BarFade object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFade.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFade.Color">
+            <summary>
+            Gets or sets the color of the bar.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFade.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFade.Size">
+            <summary>
+            Gets or sets the legend label font size.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.LabelStyleYRight">
+            <summary>
+            Represents the LabelStyleYRight chart object.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.LabelStyle">
+            <summary>
+            Represents the label style object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyle.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyle.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyle.ToString">
+            <summary>
+            Converts the axis label style object to a string.
+            </summary>
+            <returns>Returns a string representing the axis label style.</returns>
+        </member>
+        <member name="P:OpenFlashChart.LabelStyle.Size">
+            <summary>
+            Gets or sets the label size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.LabelStyle.Color">
+            <summary>
+            Gets or sets the label color.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleYRight.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleYRight.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleYRight.ToString">
+            <summary>
+            Converts the y-axis right label style object to a string.
+            </summary>
+            <returns>Returns a string representing the y-axis right label object.</returns>
+        </member>
+        <member name="T:OpenFlashChart.LabelStyleY">
+            <summary>
+            Represents the LabelStyleY chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleY.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleY.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleY.ToString">
+            <summary>
+            Converts the y-axis label style object to a string.
+            </summary>
+            <returns>Returns a string representing the y-axis label object.</returns>
+        </member>
+        <member name="T:OpenFlashChart.Charts.Pie">
+            <summary>
+            Represents the Pie chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Pie.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Creates an instance of the pie chart object.
+            </summary>
+            <param name="alpha">A integer representing the opacity of the pie chart.</param>
+            <param name="linecolor">A string representing the color of the lines in hex.</param>
+            <param name="labelcolor">A string representing the color of the labels in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Pie.ToString">
+            <summary>
+            Converts the Pie chart object to a string.
+            </summary>
+            <returns>Returns the string value of the Pie chart object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.Data">
+            <summary>
+            Gets or sets the piece of the pie.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.Alpha">
+            <summary>
+            Gets or sets the opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.LineColor">
+            <summary>
+            Gets or sets the color of the lines.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.LabelColor">
+            <summary>
+            Gets or sets the label color.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.Pie.Piece">
+            <summary>
+            Represents the Pie Piece chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Pie.Piece.#ctor(System.Single,System.String,System.String)">
+            <summary>
+            Creates an instance of the pie piece.
+            </summary>
+            <param name="value">A integer representing the pie piece size.</param>
+            <param name="label">A string representing the pie piece label.</param>
+            <param name="color">A string representing the color of the pie piece in hex.</param>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.Piece.Value">
+            <summary>
+            Gets or sets the size of the pie piece.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.Piece.Label">
+            <summary>
+            Gets or sets the label of the piece.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Pie.Piece.Color">
+            <summary>
+            Gets or sets the color of the piece.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.BarFilled">
+            <summary>
+            Represents the BarFilled chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFilled.#ctor(System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the BarFilled chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="outline">A string representing the color of the bar outline in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFilled.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Creates an instance of the BarFilled chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="outline">A string representing the color of the bar outline in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarFilled.ToString">
+            <summary>
+            Converts the BarFilled object to a string.
+            </summary>
+            <returns>Returns the string value of the BarFilled object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFilled.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFilled.Color">
+            <summary>
+            Gets or sets the color of the bar.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFilled.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFilled.Size">
+            <summary>
+            Gets or sets the legend label font size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarFilled.Outline">
+            <summary>
+            Gets or sets the bar outline color.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.LegendY">
+            <summary>
+            Represents the left y axis legend.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Legend">
+            <summary>
+            Represents the legend object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Legend.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+            <param name="size">An integer of the legend size.</param>
+            <param name="color">A string containing the legend color (Hex Colors)</param>
+        </member>
+        <member name="M:OpenFlashChart.Legend.#ctor(System.String)">
+            <summary>
+            Creates an instance of the Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+        </member>
+        <member name="M:OpenFlashChart.Legend.ToString">
+            <summary>
+            Converts the Legend object to a string.
+            </summary>
+            <returns>Returns a string of the converted LegendX object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Legend.Text">
+            <summary>
+            Gets or sets a string containing the legend text.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Legend.Size">
+            <summary>
+            Gets or sets an integer of the legend size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Legend.Color">
+            <summary>
+            Gets or sets a string containing the legend color (Hex Colors)
+            </summary>
+            <example>#000000</example>
+        </member>
+        <member name="M:OpenFlashChart.LegendY.#ctor(System.String)">
+            <summary>
+            Creates an instance of the y-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendY.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the y-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+            <param name="size">An integer of the legend size.</param>
+            <param name="color">A string containing the legend color (Hex Colors)</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendY.ToString">
+            <summary>
+            Converts the LegendY object to a string.
+            </summary>
+            <returns>Returns a string of the converted LegendX object.</returns>
+        </member>
+        <member name="T:OpenFlashChart.LabelStyleX">
+            <summary>
+            Represents the X axis label style.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.#ctor(System.Int32,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the X axis label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+            <param name="orientation">A integer containing the label orientation.</param>
+            <param name="step">A integer containing the label step.</param>
+            <param name="gridcolor">A string containing the grid color.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.#ctor(System.Int32,System.String,System.Int32,System.Int32)">
+            <summary>
+            Creates an instance of the X axis label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+            <param name="orientation">A integer containing the label orientation.</param>
+            <param name="step">A integer containing the label step.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.#ctor(System.Int32,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the X axis label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+            <param name="orientation">A integer containing the label orientation.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.#ctor(System.Int32,System.String)">
+            <summary>
+            Creates an instance of the X axis label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+            <param name="color">A string containing the label color.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the X axis label style object.
+            </summary>
+            <param name="size">An integer containing the label size.</param>
+        </member>
+        <member name="M:OpenFlashChart.LabelStyleX.ToString">
+            <summary>
+            Converts the x axis label style object to a string.
+            </summary>
+            <returns>Returns a string representing the x axis label style.</returns>
+        </member>
+        <member name="P:OpenFlashChart.LabelStyleX.Orientation">
+            <summary>
+            Gets or sets the label orientation.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.LabelStyleX.Step">
+            <summary>
+            Gets or sets the label step.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.LabelStyleX.GridColor">
+            <summary>
+            Gets or sets the grid color.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.Bar3D">
+            <summary>
+            Represents the Bar3D chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar3D.#ctor(System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the Bar3D chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar3D.#ctor(System.Int32)">
+            <summary>
+            Creates an instance of the Bar3D chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.Bar3D.ToString">
+            <summary>
+            Converts the Bar3D object to a string.
+            </summary>
+            <returns>Returns the string value of the Bar3D object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar3D.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar3D.Color">
+            <summary>
+            Gets or sets the color of the bar.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar3D.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.Bar3D.Size">
+            <summary>
+            Gets or sets the legend label font size.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.LegendX">
+            <summary>
+            Represents the X axis legend object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LegendX.#ctor(System.String)">
+            <summary>
+            Creates an instance of the x-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendX.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the x-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+            <param name="size">An integer of the legend size.</param>
+            <param name="color">A string containing the legend color (Hex Colors)</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendX.ToString">
+            <summary>
+            Converts the LegendX object to a string.
+            </summary>
+            <returns>Returns a string of the converted LegendX object.</returns>
+        </member>
+        <member name="T:OpenFlashChart.Chart">
+            <summary>
+            Represents the chart webcontrol object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Chart.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renders the chart object to on the page.
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:OpenFlashChart.Chart.Url">
+            <summary>
+            Gets or sets the url of the data file.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Chart.SequenceId">
+            <summary>
+            Gets or sets the sequenceId
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Chart.SWFObject">
+            <summary>
+            Gets or sets a boolean indicating if the SWFObject javascript should be used to load the chart.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Chart.Height">
+            <summary>
+            Gets or sets the height of the chart.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Chart.Width">
+            <summary>
+            Gets or sets the width of the chart.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.BackgroundImage">
+            <summary>
+            Represents the background image class
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.BackgroundImage.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Creates an instance of the background image object.
+            </summary>
+            <param name="url">A string containing the url of the background image.</param>
+            <param name="imageX">A string value containing the horizontal position of the background image.</param>
+            <param name="imageY">A string value containing the verticle position of the background image.</param>
+        </member>
+        <member name="M:OpenFlashChart.BackgroundImage.#ctor(System.String)">
+            <summary>
+            Creates an instance of the background image object.
+            </summary>
+            <param name="url">A string containing the url of the background image.</param>
+        </member>
+        <member name="M:OpenFlashChart.BackgroundImage.ToString">
+            <summary>
+            Converts the background image object to a string.
+            </summary>
+            <returns>Returns a string representing the BackgroundImage object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.BackgroundImage.ImageURL">
+            <summary>
+            Gets or sets the url of the background image.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.BackgroundImage.ImageX">
+            <summary>
+            Gets or sets a string value containing the horizontal position of the background image.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.BackgroundImage.ImageY">
+            <summary>
+            Gets or sets a string value containing the verticle position of the background image.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.BarGlass">
+            <summary>
+            Represents the BarGlass chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarGlass.#ctor(System.Int32,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the BarGlass chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="outline">A string representing the color of the bar outline in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="size">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarGlass.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            Creates an instance of the BarGlass chart object.
+            </summary>
+            <param name="alpha">An integer value of the opacity of the bar.</param>
+            <param name="color">A string representing the color of the bar in hex.</param>
+            <param name="outline">A string representing the color of the bar outline in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.BarGlass.ToString">
+            <summary>
+            Converts the BarGlass object to a string.
+            </summary>
+            <returns>Returns the string value of the BarFilled object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarGlass.Alpha">
+            <summary>
+            Gets or sets the percentage of opacity (transparency).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarGlass.Color">
+            <summary>
+            Gets or sets the color of the bar.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarGlass.Text">
+            <summary>
+            Gets or sets the legend label.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarGlass.Size">
+            <summary>
+            Gets or sets the legend label font size.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.BarGlass.Outline">
+            <summary>
+            Gets or sets the bar outline color.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.LegendYRight">
+            <summary>
+            Represents the right y axis legend.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.LegendYRight.#ctor(System.String)">
+            <summary>
+            Creates an instance of the right y-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendYRight.#ctor(System.String,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the right y-axis Legend object.
+            </summary>
+            <param name="text">A string containing the legend text.</param>
+            <param name="size">An integer of the legend size.</param>
+            <param name="color">A string containing the legend color (Hex Colors)</param>
+        </member>
+        <member name="M:OpenFlashChart.LegendYRight.ToString">
+            <summary>
+            Converts the LegendYRight object to a string.
+            </summary>
+            <returns>Returns a string of the converted LegendX object.</returns>
+        </member>
+        <member name="T:OpenFlashChart.Charts.LineHollow">
+            <summary>
+            Represents the LineHollow chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineHollow.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the LineHollow chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+            <param name="dotsize">A integer representing the size of dots (points).</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="fontsize">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineHollow.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the LineHollow chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+            <param name="dotsize">A integer representing the size of dots (points).</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineHollow.ToString">
+            <summary>
+            Converts the LineHollow chart object to a string.
+            </summary>
+            <returns>Returns the string value of the LineHollow chart object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineHollow.Width">
+            <summary>
+            Gets or sets the line width.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineHollow.DotSize">
+            <summary>
+            Gets or sets the size of dots (points).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineHollow.Color">
+            <summary>
+            Gets or sets the color of the line.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineHollow.Text">
+            <summary>
+            Gets or sets the label text.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineHollow.FontSize">
+            <summary>
+            Gets or sets the label font size.
+            </summary>
+        </member>
+        <member name="T:OpenFlashChart.Charts.LineDot">
+            <summary>
+            Represents the LineDot chart object.
+            </summary>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineDot.#ctor(System.Int32,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            Creates an instance of the LineDot chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+            <param name="dotsize">A integer representing the size of dots (points).</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+            <param name="text">A string representing the legend label.</param>
+            <param name="fontsize">A integer value of the legend label font size.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineDot.#ctor(System.Int32,System.Int32,System.String)">
+            <summary>
+            Creates an instance of the LineDot chart object.
+            </summary>
+            <param name="width">A integer representing the width of the line</param>
+            <param name="dotsize">A integer representing the size of dots (points).</param>
+            <param name="color">A string representing the color of the line in hex.</param>
+        </member>
+        <member name="M:OpenFlashChart.Charts.LineDot.ToString">
+            <summary>
+            Converts the LineDot chart object to a string.
+            </summary>
+            <returns>Returns the string value of the LineDot chart object.</returns>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineDot.Width">
+            <summary>
+            Gets or sets the line width.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineDot.DotSize">
+            <summary>
+            Gets or sets the size of dots (points).
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineDot.Color">
+            <summary>
+            Gets or sets the color of the line.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineDot.Text">
+            <summary>
+            Gets or sets the label text.
+            </summary>
+        </member>
+        <member name="P:OpenFlashChart.Charts.LineDot.FontSize">
+            <summary>
+            Gets or sets the label font size.
+            </summary>
+        </member>
+    </members>
+</doc>

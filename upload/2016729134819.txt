@@ -1,0 +1,30 @@
+﻿Bắt đầu Import ... 
+Thời gian bắt đầu: ngày 29 tháng 7 năm 2016 giờ 13 phút 48 giây 19
+Dòng 41 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 43 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 45 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 47 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 49 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 51 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 53 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 55 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 57 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 59 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 61 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 69 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 71 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 73 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 75 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 77 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 79 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 81 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 83 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 85 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 87 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 89 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 91 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 93 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Dòng 95 import không thành công. Conversion failed when converting character string to smalldatetime data type.
+Thời gian kết thúc: ngày 29 tháng 7 năm 2016 giờ 13 phút 48 giây 19
+Kết thúc Import ... 
+Số records: 73
