@@ -12,7 +12,7 @@
 		        <td colspan="2" 
                     style="border-bottom-style: solid; border-bottom-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 1px; padding-bottom: 1px" 
                     bordercolor="#FF9900">
-		        <p align="left"><b><font color="#FF9900">Upload dữ liệu quyết định</font></b></td>
+		        <p align="left"><b><font color="#FF9900">Upload Danh sách người nộp thuế ban đầu</font></b></td>
 	        </tr>
 	        <%--<tr>
 		            <td align="left" class="style10">Mã nghiệp vụ PP </td>
@@ -56,7 +56,7 @@
 	            </tr>--%>
                 
 	            <tr>
-		            <td colspan="2" align="left">Lưu ý: tên file không sử dụng dấu "."</td>
+		            <td colspan="2" align="left">Lưu ý: tên file không sử dụng dấu ".", dữ liệu đặt ở sheet đầu tiên</td>
 	            </tr>
                 
                 <tr>

@@ -16,6 +16,11 @@ public partial class tracuu_ImportPS : System.Web.UI.UserControl
     iSqlData conn = new iSqlData("ConStr");
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session.Count == 0)
+        {
+            Response.Redirect("~/tracuu/DangNhap.aspx");
+        }
+
         if (!Page.IsPostBack)
         {
             cmdLogFile.Text = "";
@@ -177,7 +182,7 @@ public partial class tracuu_ImportPS : System.Web.UI.UserControl
 
 
 
-            int start = 2;
+            int start = 0;
             int dong_ngay = 0;
             try
             {
@@ -198,12 +203,12 @@ public partial class tracuu_ImportPS : System.Web.UI.UserControl
 
                         string query = "SELECT MaNNT FROM DanhSachNNT WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "';";
 
-                        dt = con_cl.ExecDT(query);
+                        DataTable exist = con_cl.ExecDT(query);
 
-                        if (dt.Rows.Count > 0)
+                        if (exist.Rows.Count > 0)
                         {
                             strCmd = "UPDATE DanhSachNNT SET ";
-                            strCmd += " ngay_import = getdate()";
+                            strCmd += " NgayImport = getdate()";
                             strCmd += " , SoTienGiaoUNT = " + dt.Rows[start + i][17].ToString();
                             strCmd += " , TrangThai = 2";
                             strCmd += " WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "';";
@@ -371,7 +376,7 @@ public partial class tracuu_ImportPS : System.Web.UI.UserControl
                         strCmd += " '',";
                         strCmd += " '" + Session["MaNhanVien"] + "',";
                         strCmd += " '" + Session["MaBuuCuc"] + "',";
-                        strCmd += " ''";
+                        strCmd += " '" + Session["MaTrungTam"] + "',";
 
 
                         strCmd += ");";

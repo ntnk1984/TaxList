@@ -47,7 +47,7 @@
             width: 165px;
         }
         .auto-style2 {
-            width: 482px;
+            width: 841px;
         }
         </style>
 </head>
@@ -66,7 +66,7 @@
           <tr>
             <td align="center">
                 <%--<img border="0" src="../images/BANNER_CD.jpg" width="400" height="36">--%>
-                <H1 class="auto-style2">THU PHÍ PHẠT CÔNG AN</H1>
+                <H1 class="auto-style2">CÔNG CỤ HỖ TRỢ THEO DÕI NGƯỜI NỘP THUẾ</H1>
             </td>
           </tr>
         </table> </td>
@@ -137,7 +137,7 @@
 
     </center>
 
-    <center>Copyright @2016 Bưu Điện TP Hồ Chí Minh</center>   
+    <center>Copyright @2017 Bưu Điện TP Hồ Chí Minh</center>   
 </form>
 
     </body>

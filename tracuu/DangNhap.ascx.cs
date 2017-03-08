@@ -39,7 +39,8 @@ public partial class tracuu_DangNhap : System.Web.UI.UserControl
                 Session.Timeout = 20;
 
                 iSqlData con_cl = new iSqlData("ConStr");
-                string query = "SELECT USERID ,USERNAME,PASS,MA_BUU_CUC,TENNV FROM SYS_USER WHERE (USERNAME='" + p1.Trim() + "'  AND PASS='" + p2.Trim() + "' AND ISNULL(XOA,'0')='0') ";
+                string query = "SELECT a.USERID ,a.USERNAME,a.PASS,a.MA_BUU_CUC,TENNV,MA_TRUNG_TAM FROM SYS_USER a WHERE (USERNAME='" + p1.Trim() + "'  AND PASS='" + p2.Trim() + "' AND ISNULL(XOA,'0')='0') ";
+
                 dt = con_cl.ExecDT(query);
 
                 if (dt.Rows.Count == 0)
@@ -52,6 +53,8 @@ public partial class tracuu_DangNhap : System.Web.UI.UserControl
                     Session["MaNhanVien"] = dt.Rows[0]["USERID"].ToString();
                     Session["TenDangNhap"] = dt.Rows[0]["USERNAME"].ToString();
                     Session["HoTen"] = dt.Rows[0]["TENNV"].ToString();
+                    Session["MaBuuCuc"] = dt.Rows[0]["MA_BUU_CUC"].ToString();
+                    Session["MaTrungTam"] = dt.Rows[0]["MA_TRUNG_TAM"].ToString();
 
                     query = " SELECT menu AS MSQUYEN FROM SYS_RIGHTUSER a INNER JOIN SYS_RIGHTS b ON a.MSQUYEN=b.MSQUYEN ";
                     query += " WHERE USERNAME='" + p1.Trim() + "'";

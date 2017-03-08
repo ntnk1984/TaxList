@@ -16,6 +16,11 @@ public partial class tracuu_ImportDSNVP : System.Web.UI.UserControl
     iSqlData conn = new iSqlData("ConStr");
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (Session.Count == 0)
+        {
+            Response.Redirect("~/tracuu/DangNhap.aspx");
+        }
+
         if (!Page.IsPostBack)
         {
             cmdLogFile.Text = "";
@@ -254,7 +259,7 @@ public partial class tracuu_ImportDSNVP : System.Web.UI.UserControl
                         strCmd += " '',";
                         strCmd += " '" + Session["MaNhanVien"] + "',";
                         strCmd += " '" + Session["MaBuuCuc"] + "',";
-                        strCmd += " ''";
+                        strCmd += " '" + Session["MaTrungTam"] + "'";
 
 
                         strCmd += ");";

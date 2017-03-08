@@ -104,7 +104,7 @@ namespace TTGTTP
             if (P != "")
             {
                 UserControl uc = (UserControl)Page.LoadControl("~/tracuu/" + P + ".ascx");
-                uc.EnableViewState = false;
+                //uc.EnableViewState = false;
                 PlaceHolder1.Controls.Add(uc);
             }
             else
