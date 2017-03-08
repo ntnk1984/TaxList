@@ -11,7 +11,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using IT4U.Data;
 
-public partial class tracuu_ImportDSNVP : System.Web.UI.UserControl
+public partial class tracuu_ImportPS : System.Web.UI.UserControl
 {
     iSqlData conn = new iSqlData("ConStr");
     protected void Page_Load(object sender, EventArgs e)
@@ -177,23 +177,140 @@ public partial class tracuu_ImportDSNVP : System.Web.UI.UserControl
 
 
 
-            int start = 0;
+            int start = 2;
             int dong_ngay = 0;
             try
             {
+                iSqlData con_cl = new iSqlData("ConStr");
+
+                strCmd = "UPDATE DanhSachNNT SET TrangThai = 3;";
+                cmd.CommandText = strCmd;
+                cmd.CommandType = CommandType.Text;
+                cmd.Connection = conn;
+                cmd.ExecuteScalar();
+
                 for (int i = start; i < dt.Rows.Count; i++)
                 {
+
                     //if (!string.IsNullOrEmpty(dt.Rows[i][2].ToString()) && char.IsDigit(dt.Rows[i][2].ToString(), 0) && dt.Rows[i][2].ToString().Length < 5)
                     if (!string.IsNullOrEmpty(dt.Rows[i][0].ToString()))
                     {
-                        strCmd = " DELETE DanhSachNNT WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "' AND NgayBangKeGiaoUNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][4].ToString()) + "';";
+
+                        string query = "SELECT MaNNT FROM DanhSachNNT WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "';";
+
+                        dt = con_cl.ExecDT(query);
+
+                        if (dt.Rows.Count > 0)
+                        {
+                            strCmd = "UPDATE DanhSachNNT SET ";
+                            strCmd += " ngay_import = getdate()";
+                            strCmd += " , SoTienGiaoUNT = " + dt.Rows[start + i][17].ToString();
+                            strCmd += " , TrangThai = 2";
+                            strCmd += " WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "';";
+
+                            cmd.CommandText = strCmd;
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Connection = conn;
+                            cmd.ExecuteScalar();
+                        }
+                        else
+                        {
+                            strCmd = " DELETE DanhSachNNT WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "' AND NgayBangKeGiaoUNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][4].ToString()) + "';";
+                            cmd.CommandText = strCmd;
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Connection = conn;
+                            cmd.ExecuteScalar();
+
+
+                            strCmd = "INSERT INTO DanhSachNNT (";
+                            strCmd += "ID, MaCoQuanThue, MaUNT, TenUNT, SoBangKeGiaoUNT, NgayBangKeGiaoUNT, MaNNT, TenNNT, SacThue, Chuong, TieuMuc, DiaBan, KBNN, KyThue";
+                            strCmd += ", LoaiTaiSanNSNN, HanNop, MaGiaoUNT, LoaiTien, SoTienGiaoUNT, SoTienConPhaiThu, SoTienThuDuoc, SoTienKhongThuDuocQuyetToan, SoBienLai ";
+                            strCmd += ", NgayBienLai, SoBangKeBL, NgayBangKeBL, NgayNhanBangKe, DCCT_SoNha, DCCT_MaTinh, DCCT_TenTinh, DCCT_MaQuan, DCCT_TenQuan, DCCT_MaPhuong";
+                            strCmd += ", DCCT_TenPhuong, DCCT_DienThoai, DCCT_Email, DCNTBT_SoNha, DCNTBT_MaTinh, DCNTBT_TenTinh, DCNTBT_MaQuan, DCNTBT_TenQuan, DCNTBT_MaPhuong";
+                            strCmd += ", DCNTBT_TenPhuong, NgayImport, NgayKhoiTao, TrangThai, GhiChu, MaNhanVien, MaBuuCuc, MaTrungTam";
+
+                            strCmd += ") values(";
+
+                            //string sNgay_QD = ClsTools.Tools.FormatInput(dt.Rows[start + i][15].ToString());
+                            //sNgay_QD = ClsTools.Tools.FormatDateEN(sNgay_QD).Substring(0, 10) + " 00:00:00";
+                            strCmd += "'" + Guid.NewGuid() + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][0].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][1].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][2].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][3].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][4].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][5].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][6].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][7].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][8].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][9].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][10].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][11].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][12].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][13].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][14].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][15].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][16].ToString()) + "',";
+                            strCmd += " " + (dt.Rows[start + i][17].ToString()) + ",";//
+                            strCmd += " " + (dt.Rows[start + i][18].ToString()) + ","; //
+                            strCmd += " " + (dt.Rows[start + i][19].ToString()) + ","; //
+                            strCmd += " " + (dt.Rows[start + i][20].ToString()) + ","; //
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][21].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][22].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][23].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][24].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][25].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][26].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][27].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][28].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][29].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][30].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][31].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][32].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][33].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][34].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][35].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][36].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][37].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][38].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][39].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][40].ToString()) + "',";
+                            strCmd += " N'" + ClsTools.Tools.FormatInput(dt.Rows[start + i][41].ToString()) + "',";
+
+                            strCmd += " getdate(),";
+                            strCmd += " getdate(),";
+                            strCmd += " 1,";
+                            strCmd += " '',";
+                            strCmd += " '" + Session["MaNhanVien"] + "',";
+                            strCmd += " '" + Session["MaBuuCuc"] + "',";
+                            strCmd += " ''";
+
+
+                            strCmd += ");";
+
+                            cmd.CommandText = strCmd;
+                            cmd.CommandType = CommandType.Text;
+                            cmd.Connection = conn;
+
+                            try
+                            {
+                                cmd.ExecuteScalar();
+                            }
+                            catch (Exception ex)
+                            {
+                                sWriter.WriteLine("Dòng " + (i + 1).ToString() + " import không thành công. " + ex.Message);
+                            }
+                        }
+
+                        //import PS
+                        strCmd = " DELETE PSNNT WHERE MaNNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][5].ToString()) + "' AND TieuMuc = '" + ClsTools.Tools.FormatInput(dt.Rows[i][9].ToString()) + "' AND NgayBangKeGiaoUNT = '" + ClsTools.Tools.FormatInput(dt.Rows[i][4].ToString()) + "';";
                         cmd.CommandText = strCmd;
                         cmd.CommandType = CommandType.Text;
                         cmd.Connection = conn;
                         cmd.ExecuteScalar();
 
 
-                        strCmd = "INSERT INTO DanhSachNNT (";
+                        strCmd = "INSERT INTO PSNNT (";
                         strCmd += "ID, MaCoQuanThue, MaUNT, TenUNT, SoBangKeGiaoUNT, NgayBangKeGiaoUNT, MaNNT, TenNNT, SacThue, Chuong, TieuMuc, DiaBan, KBNN, KyThue";
                         strCmd += ", LoaiTaiSanNSNN, HanNop, MaGiaoUNT, LoaiTien, SoTienGiaoUNT, SoTienConPhaiThu, SoTienThuDuoc, SoTienKhongThuDuocQuyetToan, SoBienLai ";
                         strCmd += ", NgayBienLai, SoBangKeBL, NgayBangKeBL, NgayNhanBangKe, DCCT_SoNha, DCCT_MaTinh, DCCT_TenTinh, DCCT_MaQuan, DCCT_TenQuan, DCCT_MaPhuong";
@@ -271,6 +388,8 @@ public partial class tracuu_ImportDSNVP : System.Web.UI.UserControl
                         {
                             sWriter.WriteLine("Dòng " + (i + 1).ToString() + " import không thành công. " + ex.Message);
                         }
+
+                      
                     }
 
                 }

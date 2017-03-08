@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
+using System.Data.OleDb;
 
 /// <summary>
 /// Summary description for ImportExport
@@ -25,8 +26,27 @@ namespace TTGTVT
 
         public static DataSet ImportToDataset(string fileName)
         {
+            DataSet dtset = new DataSet();
+
             string constr = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + fileName + ";Extended Properties='Excel 8.0;HDR=YES;IMEX=1'";
                 //string constr = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties='Excel 12.0;HDR=YES;IMEX=1'";
+            OleDbConnection Conn = new OleDbConnection(constr);
+
+            Conn.Open();
+
+            System.Data.DataTable dt = Conn.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
+
+            if (dt.Rows.Count > 0)
+            {
+                String[] excelSheets = new String[dt.Rows.Count];
+                int i = 0;
+
+                // Add the sheet name to the string array.
+                foreach (DataRow row in dt.Rows)
+                {
+                    excelSheets[i] = row["TABLE_NAME"].ToString();
+                    i++;
+                }
 
                 DbProviderFactory factory = DbProviderFactories.GetFactory("System.Data.OleDb");
 
@@ -34,7 +54,7 @@ namespace TTGTVT
 
                 DbCommand selectCommand = factory.CreateCommand();
                 //selectCommand.CommandText = "SELECT 'MA DV','TEN DV','DIEM DB', 'DIEM NS', 'DIEM CL', 'HS L' FROM [diemnscl_dv$]";
-                selectCommand.CommandText = "SELECT * FROM [Sheet1$]";
+                selectCommand.CommandText = "SELECT * FROM [" + excelSheets[0].ToString() + "] ";
                 //selectCommand.CommandText = "SELECT * FROM [Sheet1$]";
 
                 DbConnection connection = factory.CreateConnection();
@@ -44,9 +64,12 @@ namespace TTGTVT
 
                 adapter.SelectCommand = selectCommand;
 
-                DataSet dtset = new DataSet();
+
                 adapter.Fill(dtset);
-                return dtset;
+
+            }
+               
+            return dtset;
 
         }
         public static void exportToExcel(DataSet source, string fileName)
